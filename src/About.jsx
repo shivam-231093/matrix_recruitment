@@ -46,7 +46,7 @@ const AboutPage = () => {
     setResponseMessage("");
 
     try {
-      const response = await fetch("http://localhost:5000/submit-suggestion", {
+      const response = await fetch("https://matrix-backend-vy0o.onrender.com/submit-suggestion", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -47,7 +47,7 @@ const Form = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/submit-recruitment", {
+      const response = await fetch("https://matrix-backend-vy0o.onrender.com/submit-recruitment", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
