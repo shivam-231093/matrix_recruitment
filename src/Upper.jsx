@@ -8,9 +8,9 @@ import Cyl from './Scene'
 function Upper() {
   return (
     
-<div className='w-[70vw] h-[80vh] '>
+<div className='w-[70vw] h-[50vw] ml-[13%] justify-center'>
 
-        <Canvas className='' camera={{fov:45}}>
+        <Canvas className='' camera={{fov:40}}>
             <OrbitControls/>
             <ambientLight/>
             <Cyl/>

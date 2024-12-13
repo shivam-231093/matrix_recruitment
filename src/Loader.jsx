@@ -5,17 +5,28 @@ const SplashScreen = () => {
   const [fadeOut, setFadeOut] = useState(false); // State to manage opacity for fade-out effect
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setFadeOut(true); // Trigger fade-out after 5 seconds
-    }, 7000); // Wait 7 seconds before starting fade-out
+    // Wait for the window to completely load before starting the timer
+    const handleLoad = () => {
+      const timer = setTimeout(() => {
+        setFadeOut(true); // Trigger fade-out after 5 seconds
+      }, 7000); // Wait 7 seconds before starting fade-out
 
-    const hideSplash = setTimeout(() => {
-      setShowSplash(false); // Hide splash screen after fade-out
-    }, 7500); // Wait 7.5 seconds for complete transition
+      const hideSplash = setTimeout(() => {
+        setShowSplash(false); // Hide splash screen after fade-out
+      }, 7500); // Wait 7.5 seconds for complete transition
 
+      return () => {
+        clearTimeout(timer);
+        clearTimeout(hideSplash);
+      };
+    };
+
+    // Attach the onload event to start the timer
+    window.onload = handleLoad;
+
+    // Clean up the event listener on component unmount
     return () => {
-      clearTimeout(timer);
-      clearTimeout(hideSplash);
+      window.onload = null;
     };
   }, []);
 
@@ -31,7 +42,6 @@ const SplashScreen = () => {
       <video
         autoPlay
         muted
-        
         className="absolute w-full h-full "
       >
         <source src="./landin.mp4" type="video/mp4" />

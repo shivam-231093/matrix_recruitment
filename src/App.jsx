@@ -5,6 +5,7 @@ import 'locomotive-scroll/dist/locomotive-scroll.css';
 import Form from './Form';
 import SplashScreen from './Loader';
 import Footer from './Footer';
+import Upper from './Upper';
 
 function App() {
   const containerRef = useRef(null);
@@ -38,12 +39,12 @@ function App() {
 
   return (
 
-    <div ref={containerRef} className="scroll-container">
+    <div ref={containerRef} className="scroll-container justify-center">
       <SplashScreen/>
     <Detail/>
     
     
-   
+    <Upper/>
     <Form/>
     <Footer/>
     </div>

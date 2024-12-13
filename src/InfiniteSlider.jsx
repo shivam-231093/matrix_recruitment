@@ -5,22 +5,21 @@ function InfiniteSlider() {
     <div >
     <div className=' w-full h-[60vh] mb-16 inline-flex overflow-y-hidden overflow-x-hidden '>
         <div className=' text-[8vw] text-stroke font-sans tracking-tighter font-bold  inline-flex gap-8 mr-8 animate-slideImg'> 
-          <img className='w-full bg-white max-h-[60vh] ' src="src\slider\1.JPG" alt="" />
-          <img className='w-full bg-white max-h-[60vh] ' src="src\slider\2.JPG" alt="" />
-          <img className='w-full bg-white max-h-[60vh] ' src="src\slider\3.JPG" alt="" />
-          <img className='w-full bg-white max-h-[60vh] ' src="src\slider\4.JPG" alt="" />
-          <img className='w-full bg-white max-h-[60vh] ' src="src\slider\5.JPG" alt="" />
-          <img className='w-full bg-white max-h-[60vh] ' src="src\slider\6.JPG" alt="" />
-          <img className='w-full bg-white max-h-[60vh] ' src="src\slider\7.JPG" alt="" />
-          <img className='w-full bg-white max-h-[60vh] ' src="src\slider\8.JPG" alt="" />  
-          <img className='w-full bg-white max-h-[60vh] ' src="src\slider\9.JPG" alt="" />  
-          <img className='w-full bg-white max-h-[60vh] ' src="src\slider\10.JPG" alt="" />  
-          <img className='w-full bg-white max-h-[60vh] ' src="src\slider\11.JPG" alt="" />
-          <img className='w-full bg-white max-h-[60vh] ' src="src\slider\12.JPG" alt="" />
-          <img className='w-full bg-white max-h-[60vh] ' src="src\slider\13.JPG" alt="" />
-          <img className='w-full bg-white max-h-[60vh] ' src="src\slider\14.JPG" alt="" />
-          <img className='w-full bg-white max-h-[60vh] ' src="src\slider\15.JPG" alt="" />
-          <img className='w-full bg-white max-h-[60vh] ' src="src\slider\16.JPG" alt="" />
+          <img className='w-full bg-white max-h-[60vh] ' src="./1.JPG" alt="" />
+          <img className='w-full bg-white max-h-[60vh] ' src="./14.png" alt="" />
+          <img className='w-full bg-white max-h-[60vh] ' src="./2.JPG" alt="" />
+        
+          <img className='w-full object-cover bg-white max-h-[60vh] ' src="./10.png" alt="" />  
+          <img className='w-full bg-white max-h-[60vh] ' src="./5.JPG" alt="" />
+          
+          <img className='w-full bg-white max-h-[60vh] ' src="./15.png" alt="" />
+          <img className='w-full bg-white max-h-[60vh] ' src="./7.JPG" alt="" />
+          <img className='w-full bg-white max-h-[60vh] ' src="./8.JPG" alt="" />  
+          <img className='w-full bg-white max-h-[60vh] ' src="./9.png" alt="" />  
+          <img className='w-full bg-white max-h-[60vh] ' src="./11.png" alt="" />
+          <img className='w-full bg-white max-h-[60vh] ' src="./12.png" alt="" />
+          <img className='w-full bg-white max-h-[60vh] ' src="./13.png" alt="" />
+          <img className='w-full bg-white max-h-[60vh] ' src="./16.png" alt="" />
         </div>
     </div>
     </div>

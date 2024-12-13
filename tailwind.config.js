@@ -31,7 +31,7 @@ export default {
       },
       animation: {
         slideIn: 'slideIn 20s linear infinite',
-        slideImg: 'slideImg 50s linear infinite',
+        slideImg: 'slideImg 20s linear infinite',
       },
       
     },
