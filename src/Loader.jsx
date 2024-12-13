@@ -7,11 +7,11 @@ const SplashScreen = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setFadeOut(true); // Trigger fade-out after 5 seconds
-    }, 7000); // Wait 4.5 seconds before starting fade-out
+    }, 7000); // Wait 7 seconds before starting fade-out
 
     const hideSplash = setTimeout(() => {
       setShowSplash(false); // Hide splash screen after fade-out
-    }, 7500); // Wait 5 seconds for complete transition
+    }, 7500); // Wait 7.5 seconds for complete transition
 
     return () => {
       clearTimeout(timer);

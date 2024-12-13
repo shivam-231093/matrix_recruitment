@@ -15,10 +15,10 @@ const Footer = () => {
           <div className="w-full md:w-1/3 mb-4 md:mb-0">
             <h2 className="text-xl font-semibold">Follow Us</h2>
             <div className="flex space-x-4 mt-2">
-              <a href="#" className="text-blue-500 hover:text-blue-400">
+              <a href="https://www.instagram.com/matrix.jec/" className="text-blue-500 hover:text-blue-400">
                 <img className="w-[4vw]" src="./insta.png" alt="" />
               </a>
-              <a href="#" className="text-blue-400 hover:text-blue-300">
+              <a href="https://www.linkedin.com/company/matrix-jec/" className="text-blue-400 hover:text-blue-300">
               <img className="w-[7vw] h-[8vh] text-2xl" src="./linked.svg" alt="" />
               </a>
              
@@ -29,10 +29,10 @@ const Footer = () => {
           <div className="w-full md:w-1/3 mb-4 md:mb-0">
             <h2 className="text-xl font-semibold">Follow Developer</h2>
             <div className="flex space-x-4 mt-2">
-              <a href="#" className="text-blue-500 hover:text-blue-400">
+              <a href="https://www.instagram.com/shivam_05.02/" className="text-blue-500 hover:text-blue-400">
                 <img className="w-[4vw]" src="./insta.png" alt="" />
               </a>
-              <a href="#" className="text-blue-400 hover:text-blue-300">
+              <a href="https://www.linkedin.com/in/shivam-mishra-for-you/" className="text-blue-400 hover:text-blue-300">
               <img className="w-[7vw] h-[8vh] text-2xl" src="./linked.svg" alt="" />
               </a>
               

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Scroller from './Scroller'
-import Form from './Form'
-import AboutPage from './About'
+
 
 
 function Detail() {

@@ -1,8 +1,4 @@
 import React, { useState ,useEffect, useRef } from 'react';
-
-import Loader from './Loader';
-import InfiniteSlider from "./InfiniteSlider";
-import Upper from './upper'
 import Detail from './Detail'
 import LocomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css'; 

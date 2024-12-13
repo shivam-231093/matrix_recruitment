@@ -11,7 +11,16 @@ function InfiniteSlider() {
           <img className='w-full bg-white max-h-[60vh] ' src="src\slider\4.JPG" alt="" />
           <img className='w-full bg-white max-h-[60vh] ' src="src\slider\5.JPG" alt="" />
           <img className='w-full bg-white max-h-[60vh] ' src="src\slider\6.JPG" alt="" />
-          <img className='w-full bg-white max-h-[60vh] ' src="src\slider\7.JPG" alt="" />  
+          <img className='w-full bg-white max-h-[60vh] ' src="src\slider\7.JPG" alt="" />
+          <img className='w-full bg-white max-h-[60vh] ' src="src\slider\8.JPG" alt="" />  
+          <img className='w-full bg-white max-h-[60vh] ' src="src\slider\9.JPG" alt="" />  
+          <img className='w-full bg-white max-h-[60vh] ' src="src\slider\10.JPG" alt="" />  
+          <img className='w-full bg-white max-h-[60vh] ' src="src\slider\11.JPG" alt="" />
+          <img className='w-full bg-white max-h-[60vh] ' src="src\slider\12.JPG" alt="" />
+          <img className='w-full bg-white max-h-[60vh] ' src="src\slider\13.JPG" alt="" />
+          <img className='w-full bg-white max-h-[60vh] ' src="src\slider\14.JPG" alt="" />
+          <img className='w-full bg-white max-h-[60vh] ' src="src\slider\15.JPG" alt="" />
+          <img className='w-full bg-white max-h-[60vh] ' src="src\slider\16.JPG" alt="" />
         </div>
     </div>
     </div>
