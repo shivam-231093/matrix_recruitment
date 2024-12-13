@@ -2,29 +2,43 @@ import React, { useState, useEffect } from 'react';
 
 const SplashScreen = () => {
   const [showSplash, setShowSplash] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false); // State to manage opacity for fade-out effect
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowSplash(false), 5000); // Set splash duration to 5 seconds
-    return () => clearTimeout(timer);
+    const timer = setTimeout(() => {
+      setFadeOut(true); // Trigger fade-out after 5 seconds
+    }, 7000); // Wait 4.5 seconds before starting fade-out
+
+    const hideSplash = setTimeout(() => {
+      setShowSplash(false); // Hide splash screen after fade-out
+    }, 7500); // Wait 5 seconds for complete transition
+
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(hideSplash);
+    };
   }, []);
 
-  if (!showSplash) return null; // Hide splash screen after timer
+  if (!showSplash) return null; // Hide splash screen after the timer
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black z-50">
+    <div
+      className={`fixed w-full h-screen flex items-center justify-center bg-black z-50 transition-opacity duration-1000 ease-in-out ${
+        fadeOut ? 'opacity-0' : 'opacity-100'
+      }`}
+    >
       {/* Video Background */}
       <video
         autoPlay
         muted
-        loop
-        className="absolute inset-0 w-full h-full object-cover"
+        
+        className="absolute w-full h-full "
       >
-        <source src="/path-to-your-video.mp4" type="video/mp4" />
+        <source src="./landin.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       {/* Overlay */}
-      
     </div>
   );
 };

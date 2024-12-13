@@ -1,14 +1,14 @@
 import React, { useState ,useEffect, useRef } from 'react';
 
 import Loader from './Loader';
-
+import InfiniteSlider from "./InfiniteSlider";
 import Upper from './upper'
-import Container from './Container'
 import Detail from './Detail'
 import LocomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css'; 
 import Form from './Form';
 import SplashScreen from './Loader';
+import Footer from './Footer';
 
 function App() {
   const containerRef = useRef(null);
@@ -43,10 +43,13 @@ function App() {
   return (
 
     <div ref={containerRef} className="scroll-container">
-    <SplashScreen/>
+      <SplashScreen/>
     <Detail/>
-    <Container/>
+    
+    
+   
     <Form/>
+    <Footer/>
     </div>
   )
 }

@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
+import InfiniteSlider from "./InfiniteSlider";
 
 
 
@@ -31,6 +32,41 @@ const AboutPage = () => {
   // }, []);
 
 
+  const [formData, setFormData] = useState({ suggestion: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [responseMessage, setResponseMessage] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setResponseMessage("");
+
+    try {
+      const response = await fetch("http://localhost:5000/submit-suggestion", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setResponseMessage("Thank you for your suggestion!");
+        setFormData({ suggestion: "" }); // Reset form
+      } else {
+        const errorData = await response.json();
+        setResponseMessage(`Error: ${errorData.message}`);
+      }
+    } catch (error) {
+      setResponseMessage("Something went wrong. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div  className="ty page2 bg z-10 text-white min-h-screen flex flex-col items-center py-10 px-10">
@@ -53,49 +89,58 @@ const AboutPage = () => {
       <h1 className="text-[3.5vw] w-[40vw] text-center tracking-[-0.1vw] leading-tight">Our Journey & Achievements Together</h1>
      </div>
     
-     <div className="w-full p-8 h-[90vh] flex justify-between mt-16">
+     <div className="w-full p-8 h-[45vh] lg:h-[90vh]  flex justify-between mt-16">
       <div onClick={()=>window.open("https://www.instagram.com/reel/C_ujHhyNXXM/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==")} className="h-full cursor-pointer w-[32%] relative ">
-        <video loop muted className="absolute" src=""></video>
+      <video className="w-full absolute h-full" autoPlay loop muted src="./amog.mp4"></video>
         <img className="hover:opacity-0 w-full h-full absolute object-fit rounded-md object-center transition duration-300 ease-in-out" src="./amog.JPG" alt=""/>
       </div>
       <div onClick={()=>window.open("https://www.instagram.com/reel/C87Ns_NP4WF/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==")} className="h-full relative cursor-pointer w-[32%] ">
-        <video loop muted className="absolute" src=""></video>
+      <video className="w-full absolute h-full" autoPlay loop muted src="./btcc.mp4"></video>
         <img className="hover:opacity-0 transition duration-300 ease-in w-full h-full absolute object-fit rounded-md object-center" src="./btcc.png" alt=""/>
       </div>
       <div onClick={()=>window.open("https://www.instagram.com/reel/DDZi4qHyTtD/?igsh=MWdya25maXdweWpraA==")} className="h-full cursor-pointer relative w-[32%] ">
-        <video loop muted className=" absolute" src=""></video>
+      <video className="w-full absolute h-full" autoPlay loop muted src="./turf.mp4"></video>
         <img className="hover:opacity-0 transition duration-300 ease-in w-full h-full absolute object-fit rounded-md object-center" src="./turf.png" alt=""/>
       </div>
      </div>
+     <InfiniteSlider/>
      <div className="w-full mt-20 text-lg items-end border-b-2 flex justify-between ">
        <h1 className="w-[30vw] p-2">Wanna Be A Part </h1>
      </div>
      <div className="justify-items-end inline-block items-center mb-44 mt-10 m-5">
       <h1 className=" h text-[3vw] tracking-[-0.1vw] leading-tight"> Whether you are a tech enthusiast, a budding editor, or a creative producer, Matrix has a place for you. </h1>
       <h1  className=" h mt-4 text-[3vw] tracking-[-0.1vw] leading-tight"> If you want to be a part of our journey, fill out our recruitment form! Got ideas, suggestions, or something you'd love to see us tackle? Share your thoughts or opinions with us—we're here to collaborate and grow together</h1>
-      
+     
       <div className=" items-center shadow-md rounded-lg p-8 w-full ">
-      <form  className="space-y-6">
-      <div >
-            <label className="block text-[2vw] font-medium mb-2">Give Us Your Suggestions</label>
-            <input
-              type="text"
-              name="name"
-              // value={formData.name}
-              // onChange={handleChange}
-              placeholder="Your Suggestion"
-              className="w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 p-3"
-            />
-          </div>
-          <div className="w-full justify-items-center items-center justify-center">
-            <button
-              type="submit"
-              className="w-[25%] ml-[35%] bg-blue-500 text-white font-medium py-3 rounded-lg shadow-sm hover:bg-blue-600 focus:ring-4 focus:ring-blue-300"
-            >
-              Submit
-            </button>
-          </div>
-        </form>
+      <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
+              <label className="block text-[2vw] text-bla font-medium mb-2">
+                Give Us Your Suggestions
+              </label>
+              <input
+                type="text"
+                name="suggestion"
+                value={formData.suggestion}
+                onChange={handleChange}
+                placeholder="Your Suggestion"
+                className="w-full border-gray-300 text-black rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 p-3"
+              />
+            </div>
+            <div className="w-full justify-items-center items-center justify-center">
+              <button
+                type="submit"
+                className="w-[25%] ml-[37.5%] bg-blue-500 text-white font-medium py-3 rounded-lg shadow-sm hover:bg-blue-600 focus:ring-4 focus:ring-blue-300"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Submitting..." : "Submit"}
+              </button>
+            </div>
+          </form>
+          {responseMessage && (
+            <div className="mt-4 text-center text-[1.5vw] font-medium">
+              {responseMessage}
+            </div>
+          )}
       </div>
      </div>
     </div>

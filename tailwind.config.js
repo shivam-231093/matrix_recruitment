@@ -6,6 +6,7 @@ export default {
   ],
   theme: {
     extend: {
+      
       animation: {
         'fade-in': 'fadeIn 2s ease-in-out',
       },
@@ -20,13 +21,19 @@ export default {
           '0%': { transform: 'translateX(1)' },
           '100%': { transform: 'translateX(-100%)'},
         },
+        slideImg: {
+          '0%': { transform: 'translateX(1)' },
+          '100%': { transform: 'translateX(-100%)'},
+        },
       },
       backgroundImage: {
         'custom-text': "url('image.png')",
       },
       animation: {
         slideIn: 'slideIn 20s linear infinite',
+        slideImg: 'slideImg 50s linear infinite',
       },
+      
     },
   },
   plugins: [function ({ addUtilities }) {
