@@ -8,26 +8,7 @@ import Footer from './Footer';
 import Upper from './Upper';
 
 function App() {
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    // Initialize Locomotive Scroll
-    const locomotiveScroll = new LocomotiveScroll({
-      el: containerRef.current,
-      smooth: true,
-    });
-
-    // Update Locomotive Scroll when the component is updated
-    locomotiveScroll.on('scroll', () => {
-      console.log('Scrolling...');
-    });
-
-    // Cleanup on component unmount
-    return () => {
-      locomotiveScroll.destroy();
-    };
-  }, [])
-
+  //
 
 
   useEffect(() => {
@@ -48,20 +29,26 @@ function App() {
 
   return (
 
-    <div ref={containerRef} className="scroll-container z-50 bg-black justify-center">
+    <div className="">
       
       {!isSplashFinished && (
     
       <SplashScreen/>
       )}
+      
       {isSplashFinished && (
+    <>
+    
     <Detail/>
-      )}
+    
+    </>
+  
+    )}
+    
+      
     
     
-    <Upper/>
-    <Form/>
-    <Footer/>
+    
     </div>
   )
 }
