@@ -13,13 +13,7 @@ function InfiniteSlider() {
           <img className='w-full bg-white max-h-[60vh] ' src="./5.JPG" alt="" />
           
           <img className='w-full bg-white max-h-[60vh] ' src="./15.png" alt="" />
-          <img className='w-full bg-white max-h-[60vh] ' src="./7.JPG" alt="" />
-          <img className='w-full bg-white max-h-[60vh] ' src="./8.JPG" alt="" />  
-          <img className='w-full bg-white max-h-[60vh] ' src="./9.png" alt="" />  
-          <img className='w-full bg-white max-h-[60vh] ' src="./11.png" alt="" />
-          <img className='w-full bg-white max-h-[60vh] ' src="./12.png" alt="" />
-          <img className='w-full bg-white max-h-[60vh] ' src="./13.png" alt="" />
-          <img className='w-full bg-white max-h-[60vh] ' src="./16.png" alt="" />
+          
         </div>
     </div>
     </div>

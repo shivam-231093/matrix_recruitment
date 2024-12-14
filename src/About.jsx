@@ -99,7 +99,7 @@ const AboutPage = () => {
         <img className="hover:opacity-0 transition duration-300 ease-in w-full h-full absolute object-fit rounded-md object-center" src="./btcc.png" alt=""/>
       </div>
       <div onClick={()=>window.open("https://www.instagram.com/reel/DDZi4qHyTtD/?igsh=MWdya25maXdweWpraA==")} className="h-full cursor-pointer relative w-[32%] ">
-      <video className="w-full absolute h-full" autoPlay loop muted src="./turf.mp4"></video>
+      <video className="w-full absolute h-full" autoPlay loop muted src="./turf1.mp4"></video>
         <img className="hover:opacity-0 transition duration-300 ease-in w-full h-full absolute object-fit rounded-md object-center" src="./turf.png" alt=""/>
       </div>
      </div>
