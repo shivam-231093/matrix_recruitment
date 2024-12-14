@@ -9,11 +9,11 @@ const SplashScreen = () => {
     const handleLoad = () => {
       const timer = setTimeout(() => {
         setFadeOut(true); // Trigger fade-out after 5 seconds
-      }, 6500); // Wait 7 seconds before starting fade-out
+      }, 7500); // Wait 7 seconds before starting fade-out
 
       const hideSplash = setTimeout(() => {
         setShowSplash(false); // Hide splash screen after fade-out
-      }, 7000); // Wait 7.5 seconds for complete transition
+      }, 8000); // Wait 7.5 seconds for complete transition
 
       return () => {
         clearTimeout(timer);
@@ -34,7 +34,7 @@ const SplashScreen = () => {
 
   return (
     <div
-      className={`fixed w-full h-screen flex items-center justify-center bg-black z-0 transition-opacity duration-1000 ease-in-out ${
+      className={`fixed w-full h-screen flex items-center justify-center bg-black transition-opacity duration-1000 ease-in-out ${
         fadeOut ? 'hidden' : 'opacity-100'
       }`}
     >

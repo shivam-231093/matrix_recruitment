@@ -7,15 +7,6 @@ export default {
   theme: {
     extend: {
       
-      animation: {
-        'fade-in': 'fadeIn 2s ease-in-out',
-      },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: 0 },
-          '100%': { opacity: 1 },
-        },
-      },
       keyframes: {
         slideIn: {
           '0%': { transform: 'translateX(1)' },
@@ -25,6 +16,11 @@ export default {
           '0%': { transform: 'translateX(1)' },
           '100%': { transform: 'translateX(-100%)'},
         },
+        fadeIn: {
+          '0%': { opacity: 1 },
+          '70%':{ opactity:0.7},
+          '100%': { opacity: 0 },
+        },
       },
       backgroundImage: {
         'custom-text': "url('image.png')",
@@ -32,6 +28,7 @@ export default {
       animation: {
         slideIn: 'slideIn 20s linear infinite',
         slideImg: 'slideImg 20s linear infinite',
+        fadeIn: 'fadeIn 1s ease-in-out',
       },
       
     },
