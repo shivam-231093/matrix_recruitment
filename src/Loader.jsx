@@ -42,6 +42,7 @@ const SplashScreen = () => {
       <video
         autoPlay
         muted
+        preload="metadata"
         className="absolute w-full h-full "
       >
         <source src="./landin.mp4" type="video/mp4" />

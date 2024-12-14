@@ -91,15 +91,22 @@ const AboutPage = () => {
     
      <div className="w-full p-8 h-[45vh] lg:h-[90vh]  flex justify-between mt-16">
       <div onClick={()=>window.open("https://www.instagram.com/reel/C_ujHhyNXXM/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==")} className="h-full cursor-pointer w-[32%] relative ">
-      <video className="w-full absolute h-full" autoPlay loop muted src="./amog.mp4"></video>
+      <video className="w-full absolute h-full" autoPlay loop muted preload="metadata">
+      <source src="./amog.mp4" type="video/mp4" />
+      </video>
         <img className="hover:opacity-0 w-full h-full absolute object-fit rounded-md object-center transition duration-300 ease-in-out" src="./amog.JPG" alt=""/>
       </div>
       <div onClick={()=>window.open("https://www.instagram.com/reel/C87Ns_NP4WF/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==")} className="h-full relative cursor-pointer w-[32%] ">
-      <video className="w-full absolute h-full" autoPlay loop muted src="./btcc.mp4"></video>
+      <video className="w-full absolute h-full" autoPlay loop muted preload="metadata">
+      <source src="./btcc.mp4" type="video/mp4" />
+      
+      </video>
         <img className="hover:opacity-0 transition duration-300 ease-in w-full h-full absolute object-fit rounded-md object-center" src="./btcc.png" alt=""/>
       </div>
       <div onClick={()=>window.open("https://www.instagram.com/reel/DDZi4qHyTtD/?igsh=MWdya25maXdweWpraA==")} className="h-full cursor-pointer relative w-[32%] ">
-      <video className="w-full absolute h-full" autoPlay loop muted src="./turf1.mp4"></video>
+      <video className="w-full absolute h-full" preload="metadata" autoPlay loop muted>
+      <source src="./turf1.mp4" type="video/mp4" />
+      </video>
         <img className="hover:opacity-0 transition duration-300 ease-in w-full h-full absolute object-fit rounded-md object-center" src="./turf.png" alt=""/>
       </div>
      </div>

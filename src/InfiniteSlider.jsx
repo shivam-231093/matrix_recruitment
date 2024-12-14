@@ -5,14 +5,14 @@ function InfiniteSlider() {
     <div >
     <div className=' w-full h-[60vh] mb-16 inline-flex overflow-y-hidden overflow-x-hidden '>
         <div className=' text-[8vw] text-stroke font-sans tracking-tighter font-bold  inline-flex gap-8 mr-8 animate-slideImg'> 
-          <img className='w-full bg-white max-h-[60vh] ' src="./1.JPG" alt="" />
-          <img className='w-full bg-white max-h-[60vh] ' src="./14.png" alt="" />
-          <img className='w-full bg-white max-h-[60vh] ' src="./2.JPG" alt="" />
+          <img className='w-full loading="lazy" bg-white max-h-[60vh] ' src="./1.JPG" alt="" />
+          <img className='w-full loading="lazy" bg-white max-h-[60vh] ' src="./14.png" alt="" />
+          <img className='w-full loading="lazy" bg-white max-h-[60vh] ' src="./2.JPG" alt="" />
         
-          <img className='w-full object-cover bg-white max-h-[60vh] ' src="./10.png" alt="" />  
-          <img className='w-full bg-white max-h-[60vh] ' src="./5.JPG" alt="" />
+          <img className='w-full loading="lazy" object-cover bg-white max-h-[60vh] ' src="./10.png" alt="" />  
+          <img className='w-full loading="lazy" bg-white max-h-[60vh] ' src="./5.JPG" alt="" />
           
-          <img className='w-full bg-white max-h-[60vh] ' src="./15.png" alt="" />
+          <img className='w-full loading="lazy" bg-white max-h-[60vh] ' src="./15.png" alt="" />
           
         </div>
     </div>
@@ -63,7 +63,7 @@ export default InfiniteSlider
 //         >
 //         <SwiperSlide>
 //         <div className=' text-[8vw] text-stroke font-sans tracking-tighter font-bold  inline-flex gap-8 mr-8'> 
-//           <img className='w-full bg-white max-h-[60vh] ' src="src\slider\1.JPG" alt="" />
+//           <img className='w-full loading="lazy" bg-white max-h-[60vh] ' src="src\slider\1.JPG" alt="" />
 //           <img className='w-full bg-white max-h-[60vh] ' src="src\slider\2.JPG" alt="" />
 //           <img className='w-full bg-white max-h-[60vh] ' src="src\slider\3.JPG" alt="" />
 //           <img className='w-full bg-white max-h-[60vh] ' src="src\slider\4.JPG" alt="" />
