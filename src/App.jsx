@@ -45,12 +45,14 @@ function App() {
   return (
 
     <div className="">
-      
-      
+      <div className='opacity-0 lg:opacity-100'>
+
       {!isSplashFinished && (
     
       <SplashScreen/>
       )}
+      </div>
+      
       
       {isSplashFinished && (
     <>
