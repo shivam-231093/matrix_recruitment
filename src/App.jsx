@@ -39,7 +39,7 @@ function App() {
 
   return (
 
-    <div ref={containerRef} className="scroll-container justify-center">
+    <div ref={containerRef} className="scroll-container z-50 justify-center">
       <SplashScreen/>
     <Detail/>
     
