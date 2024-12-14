@@ -35,7 +35,7 @@ const SplashScreen = () => {
   return (
     <div
       className={`fixed w-full h-screen flex items-center justify-center bg-black z-50 transition-opacity duration-1000 ease-in-out ${
-        fadeOut ? 'opacity-0' : 'opacity-100'
+        fadeOut ? 'hidden' : 'opacity-100'
       }`}
     >
       {/* Video Background */}
@@ -50,6 +50,7 @@ const SplashScreen = () => {
       </video>
 
       {/* Overlay */}
+      
     </div>
   );
 };
