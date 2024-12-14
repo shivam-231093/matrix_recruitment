@@ -3,7 +3,7 @@ import AboutPage from './About'
 
 function Scroller() {
   return (
-    <div >
+    <div className='z-10'>
     <div className=' w-full mb-16 inline-flex overflow-y-hidden overflow-x-hidden '>
         <div className=' text-[8vw] text-stroke font-sans tracking-tighter font-bold  inline-flex gap-8 mr-8 animate-slideIn'>
             <h4 className='hover:text-white font-bold bg-clip-text  text-transparent inline  bg-contain transition duration-3000 ease-in-out'>MATRIX </h4>

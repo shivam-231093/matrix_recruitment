@@ -34,8 +34,8 @@ const SplashScreen = () => {
 
   return (
     <div
-      className={`fixed w-full h-screen flex items-center justify-center bg-black transition-opacity duration-1000 ease-in-out ${
-        fadeOut ? 'hidden' : 'opacity-100'
+      className={`fixed w-full bg-black h-screen flex items-center justify-center ease-in-out ${
+        fadeOut ? 'hidden ' : 'z-50 opacity-100'
       }`}
     >
       {/* Video Background */}
@@ -43,7 +43,9 @@ const SplashScreen = () => {
         autoPlay
         muted
       
-        className="absolute w-full h-full "
+        className={`fixed w-full h-screen  ${
+          fadeOut ? 'hidden ' : ' opacity-100'
+        }`}
       >
         <source src="./landin.mp4" type="video/mp4" />
         Your browser does not support the video tag.

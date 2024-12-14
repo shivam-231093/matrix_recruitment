@@ -29,19 +29,30 @@ function App() {
   }, [])
 
 
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 3000);
     return () => clearTimeout(timer);
   }, []);
 
+  const [isSplashFinished, setIsSplashFinished] = useState(false);
+     useEffect(() => {
+  
+    const hideSplash = setTimeout(() => {
+      setIsSplashFinished(true);
+    }, 8000);
+    return () => {
+      clearTimeout(hideSplash);
+    };
+  }, []);
 
   return (
 
     <div ref={containerRef} className="scroll-container z-50 bg-black justify-center">
       <SplashScreen/>
+      {isSplashFinished && (
     <Detail/>
+      )}
     
     
     <Upper/>

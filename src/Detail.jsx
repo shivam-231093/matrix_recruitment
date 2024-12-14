@@ -9,7 +9,7 @@ function Detail() {
 
   const hideSplash = setTimeout(() => {
     setIsSplashFinished(true);
-  }, 7000);
+  }, 8000);
   return () => {
     clearTimeout(hideSplash);
   };
@@ -17,21 +17,20 @@ function Detail() {
 
 
   return (
-    <div className='relative'>
+    <div className=' bg-blackrelative'>
 
-{isSplashFinished && (
+
       
           <video  className="w-full absolute top-[-1.2%] z-50" autoPlay loop  muted >
              <source src="./front.mp4" type="video/mp4" />
           </video>
-  
-      )}
+
+    <div className=' pt-[55vw]'>
+    <Scroller/>
+    
+    </div>
 
    
-    <div className='pt-[55vw]'>
-
-    <Scroller/>
-    </div>
     </div>
   )
 }

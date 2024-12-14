@@ -3,8 +3,8 @@ import React from 'react'
 function InfiniteSlider() {
   return (
     <div >
-    <div className=' w-full h-[60vh] mb-16 inline-flex overflow-y-hidden overflow-x-hidden '>
-        <div className=' text-[8vw] text-stroke font-sans tracking-tighter font-bold  inline-flex gap-8 mr-8 animate-slideImg'> 
+    <div className=' w-full   inline-flex overflow-y-hidden overflow-x-hidden '>
+        <div className=' text-[8vw] w-full text-stroke font-sans tracking-tighter font-bold  inline-flex gap-8 mr-8 animate-slideImg'> 
           <img className='w-full loading="lazy" bg-white max-h-[60vh] ' src="./1.JPG" alt="" />
           <img className='w-full loading="lazy" bg-white max-h-[60vh] ' src="./14.png" alt="" />
           <img className='w-full loading="lazy" bg-white max-h-[60vh] ' src="./2.JPG" alt="" />
