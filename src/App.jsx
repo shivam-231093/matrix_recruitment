@@ -17,13 +17,28 @@ function App() {
   }, []);
 
   const [isSplashFinished, setIsSplashFinished] = useState(false);
-     useEffect(() => {
+  //    useEffect(() => {
   
-    const hideSplash = setTimeout(() => {
-      setIsSplashFinished(true);
-    }, 8000);
+  //   const hideSplash = setTimeout(() => {
+  //     setIsSplashFinished(true);
+  //   }, 8000);
+  //   return () => {
+  //     clearTimeout(hideSplash);
+  //   };
+  // }, []);
+  useEffect(() => {
+    const handleWindowLoad = () => {
+      const hideSplash = setTimeout(() => {
+        setIsSplashFinished(true);
+      }, 8000); // Set splash screen duration
+
+      return () => clearTimeout(hideSplash);
+    };
+
+    window.addEventListener('load', handleWindowLoad);
+
     return () => {
-      clearTimeout(hideSplash);
+      window.removeEventListener('load', handleWindowLoad);
     };
   }, []);
 
