@@ -4,23 +4,9 @@ import Scroller from './Scroller'
 
 
 function Detail() {
-  const [isSplashFinished, setIsSplashFinished] = useState(false);
-   useEffect(() => {
-
-  const hideSplash = setTimeout(() => {
-    setIsSplashFinished(true);
-  }, 8000);
-  return () => {
-    clearTimeout(hideSplash);
-  };
-}, []);
-
-
+ 
   return (
     <div className=' bg-blackrelative'>
-
-
-      
           <video  className="w-full absolute top-[-1.2%] z-50" autoPlay loop  muted >
              <source src="./front.mp4" type="video/mp4" />
           </video>

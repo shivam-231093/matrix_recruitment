@@ -49,7 +49,11 @@ function App() {
   return (
 
     <div ref={containerRef} className="scroll-container z-50 bg-black justify-center">
+      
+      {!isSplashFinished && (
+    
       <SplashScreen/>
+      )}
       {isSplashFinished && (
     <Detail/>
       )}
