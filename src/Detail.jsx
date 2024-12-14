@@ -21,7 +21,7 @@ function Detail() {
 
 {isSplashFinished && (
       
-          <video preload='metadata'  className="w-full absolute top-[-1.2%] -z-0" autoPlay loop  muted >
+          <video  className="w-full absolute top-[-1.2%] -z-0" autoPlay loop  muted >
              <source src="./front.mp4" type="video/mp4" />
           </video>
   
