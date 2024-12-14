@@ -46,6 +46,7 @@ function App() {
 
     <div className="">
       
+      
       {!isSplashFinished && (
     
       <SplashScreen/>
