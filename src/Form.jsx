@@ -20,8 +20,11 @@ const Form = () => {
   });
 
   const [error, setError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
 
+    const [responseMessage, setResponseMessage] = useState("");
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -41,6 +44,9 @@ const Form = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setResponseMessage("");
+
 
     if (!validateForm()) {
       return;
@@ -58,6 +64,7 @@ const Form = () => {
       if (response.ok) {
         setSuccess(true);
         setError("");
+        setResponseMessage("Your Recruitment Form is Submitted");
         setFormData({
           name: "",
           contact: "",
@@ -81,6 +88,10 @@ const Form = () => {
       }
     } catch (err) {
       setError("Network error. Please try again later.");
+      setResponseMessage("Something went wrong. Please try again later.");
+
+    }finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -350,9 +361,15 @@ The team mate lets say is your best friend from the start of the college. </h1>
             <button
               type="submit"
               className="w-full bg-blue-500 text-white font-medium py-3 rounded-lg shadow-sm hover:bg-blue-600 focus:ring-4 focus:ring-blue-300"
-            >
-              Submit
+              disabled={isSubmitting}
+              >
+                {isSubmitting ? "Submitting..." : "Submit"}
             </button>
+            {responseMessage && (
+            <div className="mt-4 text-white text-center text-[1.5vw] font-medium">
+              {responseMessage}
+            </div>
+          )}
           </div>
         </form>
       </div>
